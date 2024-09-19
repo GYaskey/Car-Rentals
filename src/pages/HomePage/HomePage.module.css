@@ -1,0 +1,74 @@
+.homePage {
+  padding: 30px 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.headlineBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headline {
+  color: #0b44cd;
+}
+
+.slogan {
+  color: rgba(18, 20, 23, 0.5);
+}
+
+.descriptionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(18, 20, 23, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.descriptionImg {
+  object-fit: cover;
+  width: 800px;
+}
+
+.descriptionText {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.descriptionTextSpan {
+  text-align: right;
+}
+
+.homeNav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bodyLink {
+  padding: 5px 10px;
+  border-radius: 12px;
+
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  background-color: #3470ff;
+  transition: all 0.2s ease;
+}
+
+.bodyLink:hover {
+  background-color: #0b44cd;
+}

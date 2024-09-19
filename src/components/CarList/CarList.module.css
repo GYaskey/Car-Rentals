@@ -1,0 +1,10 @@
+.carsContainer {
+  margin: 50px auto 100px;
+}
+
+.carsList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 29px;
+  row-gap: 50px;
+}

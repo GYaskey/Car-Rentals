@@ -1,0 +1,101 @@
+.carCard {
+  width: 274px;
+  height: 426px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.carContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carImg {
+  width: 274px;
+  height: 268px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f3f3f2;
+}
+
+.carTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carHeadline {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.carModelSpan {
+  color: #3470ff;
+}
+
+.carTags {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carTags span {
+  position: relative;
+  padding: 0 8px;
+}
+
+.carTags span::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 16px;
+  background-color: rgba(18, 20, 23, 0.1);
+  margin-right: 8px;
+}
+
+.carTags span:last-child::after {
+  display: none;
+}
+
+.learnMoreBtn {
+  display: flex;
+  width: 274px;
+  height: 44px;
+  padding: 12px 98px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #3470ff;
+  transition: all 0.2s ease;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.learnMoreBtn:hover {
+  background-color: #0b44cd;
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.catalogue {
+  padding: 50px 128px 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
