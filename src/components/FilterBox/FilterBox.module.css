@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter {
+  flex: 1;
+}
+
+.mileageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mileageInput {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 8px;
+  margin-left: 8px;
+}
+
+.select {
+  width: 100%;
+}
+
+.submitButton {
+  margin-top: 16px;
+  padding: 10px 20px;
+}

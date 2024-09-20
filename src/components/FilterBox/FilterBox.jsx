@@ -9,6 +9,9 @@ import { getAllCarsThunk } from '../../redux/filters/operations';
 import { filterCars, resetFilter } from '../../redux/filters/slice';
 import { makeFilterOptions } from '../../utilities/makeFilterOptions';
 import { priceFilterOptions } from '../../utilities/priceFilterOptions';
+import { makeSelectorStyles } from '../../utilities/makeSelectorStyles';
+import { priceSelectorStyles } from '../../utilities/priceSelectorStyles';
+import s from './FilterBox.module.css';
 
 const FilterBox = () => {
   const dispatch = useDispatch();
@@ -76,70 +79,78 @@ const FilterBox = () => {
       onSubmit={handleSubmit}
     >
       {({ setFieldValue }) => (
-        <Form>
-          <div>
-            <label htmlFor="makeFilter">Car brand</label>
-            <Field name="makeFilter">
-              {({ field }) => (
-                <Select
-                  options={makeOptions}
-                  name="makeFilter"
-                  placeholder="Enter the text"
-                  onChange={option => setFieldValue(field.name, option)}
-                  value={field.value}
-                  isClearable
-                />
-              )}
-            </Field>
-          </div>
-
-          <div>
-            <label htmlFor="maxPrice">Price/ 1 hour</label>
-            <Field name="maxPrice">
-              {({ field }) => (
-                <Select
-                  options={priceOptions}
-                  name="maxPrice"
-                  placeholder="To $"
-                  onChange={option => setFieldValue(field.name, option)}
-                  value={field.value}
-                  isClearable
-                />
-              )}
-            </Field>
-          </div>
-
-          <div>
-            <p>Сar mileage / km</p>
-            <div>
-              <label htmlFor="minMileage"></label>
-              <Field name="minMileage">
+        <Form className={s.form}>
+          <div className={s.filterContainer}>
+            <div className={s.filter}>
+              <label htmlFor="makeFilter">Car brand</label>
+              <Field name="makeFilter">
                 {({ field }) => (
-                  <input
-                    type="number"
-                    placeholder="From"
-                    {...field}
-                    value={field.value || ''}
+                  <Select
+                    className={s.select}
+                    options={makeOptions}
+                    name="makeFilter"
+                    placeholder="Enter the text"
+                    onChange={option => setFieldValue(field.name, option)}
+                    value={field.value}
+                    styles={makeSelectorStyles}
+                    isClearable
                   />
                 )}
               </Field>
             </div>
-            <div>
-              <label htmlFor="maxMileage"></label>
-              <Field name="maxMileage">
+
+            <div className={s.filter}>
+              <label htmlFor="maxPrice">Price / 1 hour</label>
+              <Field name="maxPrice">
                 {({ field }) => (
-                  <input
-                    type="number"
-                    placeholder="To"
-                    {...field}
-                    value={field.value || ''}
+                  <Select
+                    className={s.select}
+                    options={priceOptions}
+                    name="maxPrice"
+                    placeholder="To $"
+                    onChange={option => setFieldValue(field.name, option)}
+                    value={field.value}
+                    styles={priceSelectorStyles}
+                    isClearable
                   />
                 )}
               </Field>
             </div>
+
+            <div className={s.mileageContainer}>
+              <p>Сar mileage / km</p>
+              <div className={s.mileageInput}>
+                <Field name="minMileage">
+                  {({ field }) => (
+                    <input
+                      className={s.input}
+                      type="number"
+                      placeholder="From"
+                      {...field}
+                      value={field.value || ''}
+                    />
+                  )}
+                </Field>
+              </div>
+              <div className={s.mileageInput}>
+                <Field name="maxMileage">
+                  {({ field }) => (
+                    <input
+                      className={s.input}
+                      type="number"
+                      placeholder="To"
+                      {...field}
+                      value={field.value || ''}
+                    />
+                  )}
+                </Field>
+              </div>
+            </div>
           </div>
 
-          <button type="submit">Search</button>
+          <button className={s.submitButton} type="submit">
+            Search
+          </button>
         </Form>
       )}
     </Formik>
