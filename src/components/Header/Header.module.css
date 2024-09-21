@@ -3,11 +3,37 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  height: 35px;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  display: flex;
+  background-color: #0b44cd;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.link {
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.active {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(126, 246, 255);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
 }

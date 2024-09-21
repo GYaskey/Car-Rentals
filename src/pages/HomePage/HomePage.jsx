@@ -33,14 +33,14 @@ const HomePage = () => {
             Enjoy seamless booking, flexible options, and exceptional customer
             service tailored to make your journey unforgettable.
           </span>
-          <div className={s.homeNav}>
+          <span className={s.homeNav}>
             <NavLink to="/catalogue" className={s.bodyLink}>
               Catalogue
             </NavLink>
             <NavLink to="/favorites" className={s.bodyLink}>
               Favorites
             </NavLink>
-          </div>
+          </span>
         </p>
       </div>
     </div>

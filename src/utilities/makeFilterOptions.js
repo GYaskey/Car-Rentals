@@ -6,5 +6,5 @@ export const makeFilterOptions = allCars => {
     label: make,
   }));
 
-  return [{ value: null, label: 'All' }, ...options];
+  return [{ value: '', label: 'All' }, ...options];
 };
