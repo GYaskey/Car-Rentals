@@ -1,0 +1,16 @@
+.loadMoreBtn {
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.loadMoreBtn:hover {
+  background: #0b44cd;
+}
