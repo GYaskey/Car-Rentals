@@ -49,6 +49,7 @@
   object-fit: cover;
   border-radius: 14px;
   background: #f3f3f2;
+  max-height: 280px;
 }
 
 .titleTagsBox {

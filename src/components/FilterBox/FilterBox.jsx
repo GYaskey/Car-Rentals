@@ -69,6 +69,9 @@ const FilterBox = () => {
 
   const handleReset = () => {
     dispatch(resetFilter());
+    toast.success('All filters have been reset', {
+      duration: 3000,
+    });
   };
 
   return (
