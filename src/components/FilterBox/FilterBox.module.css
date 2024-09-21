@@ -1,6 +1,8 @@
 .form {
   display: flex;
-  flex-direction: column;
+  gap: 18px;
+  align-items: flex-end;
+  margin-top: 30px;
 }
 
 .filterContainer {
@@ -9,13 +11,37 @@
   gap: 16px;
 }
 
-.filter {
-  flex: 1;
+.makeFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priceFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .mileageContainer {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mileageLabel {
+  color: #8a8a89;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.mileageInputs {
+  display: flex;
+  gap: 0;
 }
 
 .mileageInput {
@@ -23,16 +49,194 @@
   align-items: center;
 }
 
-.input {
-  padding: 8px;
-  margin-left: 8px;
+.inputWrapper {
+  display: flex;
+  position: relative;
+  width: 160px;
+  height: 48px;
 }
 
-.select {
+.input {
+  padding: 12px 16px 12px 0px;
   width: 100%;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #f7f7fb;
+  border-radius: 0;
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  outline: none;
+}
+
+.minInput {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  padding-left: 70px;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+}
+
+.maxInput {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  padding-left: 48px;
+}
+
+.input:focus {
+}
+
+.inputLabel {
+  position: absolute;
+  top: 47%;
+  left: 18px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #121417;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.mileageInput:first-child .input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.mileageInput:last-child .input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
 }
 
 .submitButton {
-  margin-top: 16px;
-  padding: 10px 20px;
+  width: 136px;
+  height: 48px;
+  display: flex;
+  padding: 14px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #0b44cd;
+}
+
+.selectLabel {
+  color: #8a8a89;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.customSelect :global(.react-select__control) {
+  cursor: pointer;
+  height: 48px;
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 14px;
+  background-color: #f7f7fb;
+  outline: none;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.customSelect :global(.react-select__indicator-separator) {
+  display: none;
+}
+
+.customSelect :global(.react-select__control--is-focused) {
+  outline: none;
+  box-shadow: none;
+}
+
+.customSelect :global(.react-select__control):hover {
+  outline: none;
+}
+
+.customSelect :global(.react-select__placeholder) {
+  color: #121417;
+}
+
+.customSelect :global(.react-select__option) {
+  color: rgba(18, 20, 23, 0.5);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.customSelect :global(.react-select__option:hover) {
+  color: #121417;
+  background-color: rgba(18, 20, 23, 0.1);
+}
+
+.customSelect :global(.react-select__option:focus) {
+  color: #121417;
+  background-color: #fff;
+}
+
+.customSelect :global(.react-select__option--is-selected) {
+  color: #121417;
+  background-color: #f7f7fb;
+}
+
+.customSelect :global(.react-select__menu) {
+  margin-top: 4px;
+  z-index: 4;
+  overflow: hidden;
+  border: 1px solid rgba(18, 20, 23, 0.05);
+  box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+  background-color: #fff;
+  border-radius: 14px;
+  scrollbar-width: 2px;
+}
+
+.customSelect :global(.react-select__single-value) {
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.customSelect :global(.react-select__dropdown-indicator) {
+  color: #121417;
+  border: none;
+}
+
+.customSelect :global(.react-select__dropdown-indicator:hover) {
+  color: #121417;
+  border: none;
+}
+
+.customSelect
+  :global(.react-select__control--menu-is-open)
+  :global(.react-select__dropdown-indicator) {
+  transform: rotate(180deg);
+}
+
+.customSelect :global(.react-select__value-container) {
+  padding-left: 14px;
+}
+
+.makeSelect {
+  min-width: 224px;
+}
+
+.priceSelect {
+  min-width: 125px;
 }
