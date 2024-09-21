@@ -67,6 +67,10 @@ const FilterBox = () => {
     }
   };
 
+  const handleReset = () => {
+    dispatch(resetFilter());
+  };
+
   return (
     <Formik
       initialValues={{
@@ -159,6 +163,13 @@ const FilterBox = () => {
 
           <button className={s.submitButton} type="submit">
             Search
+          </button>
+          <button
+            className={s.submitButton}
+            type="button"
+            onClick={handleReset}
+          >
+            Reset
           </button>
         </Form>
       )}

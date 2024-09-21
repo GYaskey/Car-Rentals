@@ -211,6 +211,7 @@
   color: #121417;
   font-size: 18px;
   font-weight: 500;
+  overflow: visible;
 }
 
 .customSelect :global(.react-select__dropdown-indicator) {
