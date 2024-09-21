@@ -1,0 +1,204 @@
+.modalOverlay {
+  background: rgba(18, 20, 23, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 541px;
+  padding: 40px;
+  background: #fff;
+  position: relative;
+  overflow: auto;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 24px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.imgTitleDescWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carImage {
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f3f3f2;
+}
+
+.titleTagsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carTitle {
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.titleHighlight {
+  color: #3470ff;
+}
+
+.carTags {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  width: 350px;
+  align-items: flex-start;
+}
+
+.carTags span {
+  position: relative;
+  padding: 0 8px;
+}
+
+.carTags span::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 16px;
+  background-color: rgba(18, 20, 23, 0.1);
+  margin-right: 8px;
+}
+
+.carTags span:last-child::after {
+  display: none;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.accessoriesAndFuncWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accessoriesAndFuncTitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.accessoriesAndFuncList {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.accessoriesAndFunc {
+  position: relative;
+  padding: 0 8px;
+}
+
+.accessoriesAndFunc::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 16px;
+  background-color: rgba(18, 20, 23, 0.1);
+  margin-right: 8px;
+}
+
+.accessoriesAndFunc:last-child::after {
+  display: none;
+}
+
+.rentCondWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 500px;
+}
+
+.rentCondTitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rentalCondList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #363535;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.rentalCond {
+  padding: 7px 14px;
+  border-radius: 35px;
+  background: #f9f9f9;
+  display: flex;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rentalCondHighlight {
+  color: #3470ff;
+  font-weight: 600;
+}
+
+.rentCarLink {
+  display: flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #fff;
+  background: #3470ff;
+  transition: all 0.2s ease;
+}
+.rentCarLink:hover {
+  background-color: #0b44cd;
+}

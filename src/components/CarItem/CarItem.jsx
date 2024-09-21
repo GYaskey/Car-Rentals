@@ -8,7 +8,7 @@ import {
   removeFromFavorites,
 } from '../../redux/favorites/slice';
 
-const CarItem = ({ car }) => {
+const CarItem = ({ car, onLearnMoreClick }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
 
@@ -49,7 +49,11 @@ const CarItem = ({ car }) => {
           </p>
         </div>
       </div>
-      <button type="button" className={s.learnMoreBtn}>
+      <button
+        type="button"
+        className={s.learnMoreBtn}
+        onClick={() => onLearnMoreClick(car)}
+      >
         Learn more
       </button>
       <button type="button" className={s.favoriteBtn} onClick={handleLike}>
